@@ -14,6 +14,7 @@
       text-align: center;
       color: #444;
       margin-bottom: 30px;
+      /* text-wrap: nowrap; */
     }
 
     .form-container {
