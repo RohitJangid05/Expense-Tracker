@@ -1,0 +1,182 @@
+  * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #444;
+      margin-bottom: 30px;
+    }
+
+    .form-container {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 650px;
+      margin: auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .form-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    input,
+    select,
+    button {
+      padding: 8px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      flex: 1;
+      min-width: 150px;
+    }
+
+    button {
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #357ABD;
+    }
+
+    #container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 10px;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      max-width: 320px;
+      width: 100%;
+      font-size: 14px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th,
+    td {
+      border: 1px solid #eee;
+      padding: 6px 8px;
+      text-align: center;
+      font-size: 13px;
+      word-wrap: break-word;
+    }
+
+    th {
+      background-color: #f5f5f5;
+    }
+
+    .totals {
+      margin-top: 8px;
+      text-align: right;
+      font-weight: bold;
+      font-size: 13px;
+      padding: 5px;
+    }
+
+    .amount-green {
+      color: green;
+      font-weight: bold;
+    }
+
+    .amount-red {
+      color: red;
+      font-weight: bold;
+    }
+
+    .delete-btn {
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 4px 8px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+
+    .delete-btn:hover {
+      background-color: #cc0000;
+    }
+
+    .no-data {
+      text-align: center;
+      color: #777;
+      margin-top: 40px;
+      font-size: 16px;
+    }
+
+    .footer {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-top: 10px;
+    }
+
+    .footer .net-amount {
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .footer .positive {
+      color: green;
+    }
+
+    .footer .negative {
+      color: red;
+    }
+
+    /* ✅ Responsive tweaks */
+    @media screen and (max-width: 600px) {
+      input,
+      select,
+      button {
+        flex: 100%;
+        min-width: 100%;
+      }
+
+      .card {
+        font-size: 13px;
+        padding: 10px;
+        width: 100%;
+      }
+
+      th,
+      td {
+        font-size: 12px;
+        padding: 5px;
+      }
+
+      .totals {
+        font-size: 12px;
+      }
+
+      .form-group {
+        flex-direction: column;
+      }
+    }
