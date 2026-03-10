@@ -50,9 +50,9 @@ const ExpenseForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className={`w-full flex flex-col bg-white rounded-t-3xl gap-5 px-5 fixed left-0 transition-all duration-300 ease-in-out
+      className={`w-full h-[68vh] flex flex-col bg-white rounded-t-3xl gap-5 px-5 fixed left-0 transition-all duration-300 ease-in-out
       ${form
-        ? "bottom-[14vh] opacity-100"
+        ? "bottom-[20vh] opacity-100"
         : "-bottom-full opacity-0"}`}
     >
       <div className="flex items-center py-2">
