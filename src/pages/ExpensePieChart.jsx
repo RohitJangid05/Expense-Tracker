@@ -71,40 +71,41 @@ const ExpensePieChart = () => {
           No expense data available
         </p>
       ) : (
-        <ResponsiveContainer width="100%" height="80%">
-          <PieChart>
-            <Pie
-              data={chartData}
-              dataKey="value"
-              nameKey="name"
-              innerRadius={70}
-              outerRadius={110}
-              paddingAngle={3}
-              label={({ percent }) =>
-                `${(percent * 100).toFixed(0)}%`
-              }
-            >
-              {chartData.map((entry, index) => (
-                <Cell
-                  key={`cell-${index}`}
-                  fill={COLORS[index % COLORS.length]}
-                />
-              ))}
-            </Pie>
+        <>
+          {chartData.length > 0 && (
+            <div className="mt-8 font-semibold text-lg">
+              Total Expense: ₹{totalExpense}
+            </div>
+          )}
+          <ResponsiveContainer width="100%" height="80%" className={"px-4"}>
+            <PieChart>
+              <Pie
+                data={chartData}
+                dataKey="value"
+                nameKey="name"
+                innerRadius={70}
+                outerRadius={110}
+                paddingAngle={3}
+                label={({ percent }) =>
+                  `${(percent * 100).toFixed(0)}%`
+                }
+              >
+                {chartData.map((entry, index) => (
+                  <Cell
+                    key={`cell-${index}`}
+                    fill={COLORS[index % COLORS.length]}
+                  />
+                ))}
+              </Pie>
 
-            <Tooltip
-              formatter={(value) => `₹${value}`}
-            />
+              <Tooltip
+                formatter={(value) => `₹${value}`}
+              />
 
-            <Legend />
-          </PieChart>
-        </ResponsiveContainer>
-      )}
-
-      {chartData.length > 0 && (
-        <div className="text-center mt-4 font-semibold text-lg">
-          Total Expense: ₹{totalExpense}
-        </div>
+              <Legend />
+            </PieChart>
+          </ResponsiveContainer>
+        </>
       )}
     </div>
   );

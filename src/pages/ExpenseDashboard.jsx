@@ -19,7 +19,7 @@ const Home = () => {
   }, 0);
 
   return (
-    <div className="h-[91vh]">
+    <div className="h-[68vh]">
       {/* Header */}
       <h1 className="text-white text-2xl h-30 flex items-center p-4">
         Total Expense: ₹{totalBalance}
