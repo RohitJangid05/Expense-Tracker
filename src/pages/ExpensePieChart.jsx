@@ -61,8 +61,8 @@ const ExpensePieChart = () => {
   }, [chartData]);
 
   return (
-    <div className="w-full h-screen bg-white rounded-xl p-6 shadow">
-      <h2 className="text-xl font-semibold mb-4">
+    <div className="w-full h-screen bg-white rounded-xl shadow">
+      <h2 className="text-xl text-center font-semibold pt-6">
         Expense Distribution
       </h2>
 
@@ -73,11 +73,11 @@ const ExpensePieChart = () => {
       ) : (
         <>
           {chartData.length > 0 && (
-            <div className="mt-8 font-semibold text-lg">
+            <div className="mt-4 font-semibold text-lg px-6">
               Total Expense: ₹{totalExpense}
             </div>
           )}
-          <ResponsiveContainer width="100%" height="80%" className={"px-4"}>
+          <ResponsiveContainer width="100%" height="80%">
             <PieChart>
               <Pie
                 data={chartData}
